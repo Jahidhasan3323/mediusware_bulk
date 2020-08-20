@@ -773,3 +773,21 @@ Did you mean one of these?
 #33 E:\\xamp7\\htdocs\\mediusware_bulk\\server.php(21): require_once('E:\\\\xamp7\\\\htdocs...')
 #34 {main}
 "} 
+[2020-08-20 08:04:12] local.ERROR: Invalid preset. {"exception":"[object] (InvalidArgumentException(code: 0): Invalid preset. at E:\\xamp7\\htdocs\\mediusware_bulk\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\PresetCommand.php:36)
+[stacktrace]
+#0 [internal function]: Illuminate\\Foundation\\Console\\PresetCommand->handle()
+#1 E:\\xamp7\\htdocs\\mediusware_bulk\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(29): call_user_func_array(Array, Array)
+#2 E:\\xamp7\\htdocs\\mediusware_bulk\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(87): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#3 E:\\xamp7\\htdocs\\mediusware_bulk\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(31): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#4 E:\\xamp7\\htdocs\\mediusware_bulk\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(549): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#5 E:\\xamp7\\htdocs\\mediusware_bulk\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(183): Illuminate\\Container\\Container->call(Array)
+#6 E:\\xamp7\\htdocs\\mediusware_bulk\\vendor\\symfony\\console\\Command\\Command.php(255): Illuminate\\Console\\Command->execute(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#7 E:\\xamp7\\htdocs\\mediusware_bulk\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(170): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#8 E:\\xamp7\\htdocs\\mediusware_bulk\\vendor\\symfony\\console\\Application.php(987): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#9 E:\\xamp7\\htdocs\\mediusware_bulk\\vendor\\symfony\\console\\Application.php(255): Symfony\\Component\\Console\\Application->doRunCommand(Object(Illuminate\\Foundation\\Console\\PresetCommand), Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#10 E:\\xamp7\\htdocs\\mediusware_bulk\\vendor\\symfony\\console\\Application.php(148): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#11 E:\\xamp7\\htdocs\\mediusware_bulk\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Application.php(88): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#12 E:\\xamp7\\htdocs\\mediusware_bulk\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(121): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#13 E:\\xamp7\\htdocs\\mediusware_bulk\\artisan(35): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#14 {main}
+"} 
