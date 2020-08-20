@@ -1,22 +1,22 @@
 <?php
 
-namespace Bulkly\Http\Controllers\Auth;
+namespace App\Http\Controllers\Auth;
 
-use Bulkly\Http\Controllers\Controller;
-
+use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
-use \Illuminate\Http\Request;
-use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\Validator;
 
 class LoginController extends Controller
 {
-  
-
-     public function __construct()
-    {
-        $this->middleware('guest', ['except' => 'logout']);
-    }
+    /*
+    |--------------------------------------------------------------------------
+    | Login Controller
+    |--------------------------------------------------------------------------
+    |
+    | This controller handles authenticating users for the application and
+    | redirecting them to your home screen. The controller uses a trait
+    | to conveniently provide its functionality to your applications.
+    |
+    */
 
     use AuthenticatesUsers;
 
@@ -25,45 +25,15 @@ class LoginController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/';
+    protected $redirectTo = '/home';
 
     /**
      * Create a new controller instance.
      *
      * @return void
      */
-
-    public function loginNow(Request $request){
-
-        $input = $request->input();
-        $validator = Validator::make($input,[
-                'email' => 'required|email|exists:users,email',
-                'password' => 'required',
-            ]
-        );
-        if ($validator->fails()) {
-            return redirect()->back()->withErrors($validator->errors());
-        }
-
-        try {
-
-            $credentials = $request->only('email', 'password');
-            $remember = isset($request->remember) ? true : false;
-            if (Auth::attempt($credentials, $remember)) {
-                return redirect()->route('home');
-            } else {
-                return redirect()->back()->withErrors(['email' => ['Invalid credentials']]);
-            }
-
-        } catch (\Exception $e){
-            return redirect()->back()->withErrors($e->getMessage());
-        }
-
+    public function __construct()
+    {
+        $this->middleware('guest')->except('logout');
     }
-
-    
-
-
-
-    
 }
