@@ -16,12 +16,3 @@ use Illuminate\Foundation\Inspiring;
 Artisan::command('inspire', function () {
     $this->comment(Inspiring::quote());
 })->describe('Display an inspiring quote');
-
-Artisan::command('sendpost', function () {
- 
-})->describe('Send Post');
-
-
-Artisan::command('rss', function () {
- 
-})->describe('Send Post');
